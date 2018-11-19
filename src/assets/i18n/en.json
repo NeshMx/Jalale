@@ -1,0 +1,19 @@
+{
+  "TAB1_TITLE": "Home",
+  "TAB2_TITLE": "List",
+  "TAB3_TITLE": "Account",
+
+  "TUTORIAL_SKIP_BUTTON": "Skip",
+  "TUTORIAL_CONTINUE_BUTTON": "Continue",
+
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to Jálale",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The best app to find public toilets",
+
+  "TUTORIAL_SLIDE2_TITLE": "How to use Jálale?",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Login with your Google or Facebook account",
+
+  "TUTORIAL_SLIDE3_TITLE": "Then",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Press the button to get your location and you'll get the nearest marker",
+
+  "TUTORIAL_SLIDE4_TITLE": "Hurry up!"
+}

@@ -1,0 +1,19 @@
+{
+  "TAB1_TITLE": "Inicio",
+  "TAB2_TITLE": "Lista",
+  "TAB3_TITLE": "Cuenta",
+
+  "TUTORIAL_SKIP_BUTTON": "Saltar",
+  "TUTORIAL_CONTINUE_BUTTON": "Continuar",
+
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido a Jálale",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "La mejor aplicación para encontrar baños públicos",
+
+  "TUTORIAL_SLIDE2_TITLE": "¿Cómo usar Jálale?",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Inicia sesión con tu cuenta de Google o Facebook",
+  
+  "TUTORIAL_SLIDE3_TITLE": "Después",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Presiona el botón para encontrar tu ubicación y obtendrás el marcador más cercano a tu posición",
+
+  "TUTORIAL_SLIDE4_TITLE": "¡Que no te gane!"
+}

@@ -1,8 +1,8 @@
 {
   "name": "Jalale",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Alejandro Huerta",
+  "homepage": "https://neshmx.github.io",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -29,11 +29,13 @@
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "@ngx-translate/core": "8.0.0",
+    "@ngx-translate/http-loader": "^2.0.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "Aplicación para la materia de Gestión de Proyectos de Software"
 }
