@@ -15,7 +15,31 @@
 
 </ion-header>
 
+<ion-content>
+  <ion-card *ngIf="facebookLoggedIn">
+    <img src="{{ facebookProfilePicture }}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{ facebookName }}
+      </ion-card-title>
+      <p>
+        {{ facebookEmail }}
+      </p>
+    </ion-card-content>
+  </ion-card>
 
-<ion-content padding>
+  <ion-card *ngIf="googleLoggedIn">
+    <img src="{{ googleProfilePicture }}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{ googleName }}
+      </ion-card-title>
+      <p>
+        {{ googleEmail }}
+      </p>
+    </ion-card-content>
+  </ion-card>
 
+  <button *ngIf="facebookLoggedIn" ion-button block (click)="logoutOfFacebook()" class="login">{{ 'LOGOUT' | translate }}</button>
+  <button *ngIf="googleLoggedIn" ion-button block (click)="logoutOfFacebook()" class="login">{{ 'LOGOUT' | translate }}</button>
 </ion-content>

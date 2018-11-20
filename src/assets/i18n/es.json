@@ -3,6 +3,8 @@
   
   "LOGIN_FACEBOOK": "Inicia sesión con Facebook",
   "LOGIN_GOOGLE": "Inicia sesión con Google",
+  "LOGIN_GUEST": "Inicia sesión como invitado",
+  "LOGOUT": "Cerrar sesión",
 
   "TAB1_TITLE": "Mapa",
   "TAB2_TITLE": "Lista",

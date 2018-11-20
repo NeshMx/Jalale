@@ -36,6 +36,8 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(config),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -43,9 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    IonicStorageModule.forRoot(),
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(config)
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

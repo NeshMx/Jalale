@@ -3,6 +3,8 @@
   
   "LOGIN_FACEBOOK": "Sign in with Facebook",
   "LOGIN_GOOGLE": "Sign in with Google",
+  "LOGIN_GUEST": "Sign in as guest",
+  "LOGOUT": "Log Out",
 
   "TAB1_TITLE": "Map",
   "TAB2_TITLE": "List",

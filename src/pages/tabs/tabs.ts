@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Tab1Root, Tab2Root } from '../';
 
@@ -24,11 +24,13 @@ export class TabsPage {
   tab1Title = " ";
   tab2Title = " ";
 
-  constructor(public navCtrl: NavController, public translateService: TranslateService) {
+  constructor(public navCtrl: NavController, 
+    public translateService: TranslateService,
+    public navParams: NavParams) {
+
     translateService.get(['TAB1_TITLE', 'TAB2_TITLE']).subscribe(values => {
       this.tab1Title = values['TAB1_TITLE'];
       this.tab2Title = values['TAB2_TITLE'];
     });
   }
-
 }
