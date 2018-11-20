@@ -1,7 +1,13 @@
 {
-  "TAB1_TITLE": "Home",
+  "BACK_BUTTON_TEXT": "Back",
+  
+  "LOGIN_FACEBOOK": "Sign in with Facebook",
+  "LOGIN_GOOGLE": "Sign in with Google",
+
+  "TAB1_TITLE": "Map",
   "TAB2_TITLE": "List",
   "TAB3_TITLE": "Account",
+  "TAB4_TITLE": "About", 
 
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
@@ -15,5 +21,13 @@
   "TUTORIAL_SLIDE3_TITLE": "Then",
   "TUTORIAL_SLIDE3_DESCRIPTION": "Press the button to get your location and you'll get the nearest marker",
 
-  "TUTORIAL_SLIDE4_TITLE": "Hurry up!"
+  "TUTORIAL_SLIDE4_TITLE": "Hurry up!",
+
+  "WELCOME_INTRO": "Let's find a toilet!",
+
+  "MAP_TITLE": "Map",
+  "LIST_TITLE": "List",
+  
+  "LOGIN_SUCCESS": "Login was successful.",
+  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again."
 }

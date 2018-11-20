@@ -14,25 +14,17 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    // { title: 'Cards', component: 'CardsPage' },
-    // { title: 'Content', component: 'ContentPage' },
-    // { title: 'Login', component: 'LoginPage' },
-    // { title: 'Signup', component: 'SignupPage' },
-    // { title: 'Master Detail', component: 'ListMasterPage' },
-    // { title: 'Menu', component: 'MenuPage' },
-    // { title: 'Settings', component: 'SettingsPage' },
-    // { title: 'Search', component: 'SearchPage' }
+    { title: 'Home', component: 'TabsPage' },
+    { title: 'Account', component: 'AccountPage' },
+    { title: 'About', component: 'AboutPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
     this.initTranslate();
   }

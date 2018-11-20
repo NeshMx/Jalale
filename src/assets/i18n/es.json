@@ -1,7 +1,13 @@
 {
-  "TAB1_TITLE": "Inicio",
+  "BACK_BUTTON_TEXT": "Atrás",
+  
+  "LOGIN_FACEBOOK": "Inicia sesión con Facebook",
+  "LOGIN_GOOGLE": "Inicia sesión con Google",
+
+  "TAB1_TITLE": "Mapa",
   "TAB2_TITLE": "Lista",
   "TAB3_TITLE": "Cuenta",
+  "TAB4_TITLE": "Acerca de", 
 
   "TUTORIAL_SKIP_BUTTON": "Saltar",
   "TUTORIAL_CONTINUE_BUTTON": "Continuar",
@@ -15,5 +21,13 @@
   "TUTORIAL_SLIDE3_TITLE": "Después",
   "TUTORIAL_SLIDE3_DESCRIPTION": "Presiona el botón para encontrar tu ubicación y obtendrás el marcador más cercano a tu posición",
 
-  "TUTORIAL_SLIDE4_TITLE": "¡Que no te gane!"
+  "TUTORIAL_SLIDE4_TITLE": "¡Que no te gane!",
+
+  "WELCOME_INTRO": "!Encontremos un baño!",
+
+  "MAP_TITLE": "Mapa",
+  "LIST_TITLE": "Lista",
+
+  "LOGIN_SUCCESS": "Inicio de sesión exitoso.",
+  "LOGIN_ERROR": "No se pudo iniciar sesión. Intente de nuevo."
 }

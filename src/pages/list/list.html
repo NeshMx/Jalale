@@ -7,7 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>list</ion-title>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'LIST_TITLE' | translate }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

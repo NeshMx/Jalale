@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
 /**
- * Generated class for the ListPage page.
+ * Generated class for the MapPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,10 +10,10 @@ import { IonicPage, NavController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html',
+  selector: 'page-map',
+  templateUrl: 'map.html',
 })
-export class ListPage {
+export class MapPage {
 
   constructor(public navCtrl: NavController) {
   }
