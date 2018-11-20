@@ -14,9 +14,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Home', component: 'TabsPage' },
-    { title: 'Account', component: 'AccountPage' },
-    { title: 'About', component: 'AboutPage' }
+    { title: 'Inicio', component: 'TabsPage' },
+    { title: 'Cuenta', component: 'AccountPage' },
+    { title: 'Acerca de', component: 'AboutPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
