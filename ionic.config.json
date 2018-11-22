@@ -1,6 +1,8 @@
 {
   "name": "Jalale",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "pro_id": "e5908067"
 }
