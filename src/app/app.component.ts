@@ -5,11 +5,12 @@ import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = FirstRunPage;
+  rootPage = FirstRunPage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -23,6 +24,7 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      window.localStorage.clear();
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

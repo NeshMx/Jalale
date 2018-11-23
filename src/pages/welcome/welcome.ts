@@ -33,22 +33,6 @@ export class WelcomePage {
 
   }
 
-  // loginWithFacebook() {
-  //   this.fire.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-  //   .then( res => {
-  //     console.log(res);
-  //     this.provider.loggedIn = true;
-  //     this.provider.name = res.user.displayName;
-  //     this.provider.profilePicture = res.user.photoURL;
-  //     this.provider.email = res.user.email;
-  //     window.localStorage.setItem('fbLoggedIn', this.provider.loggedIn.toString());
-  //     window.localStorage.setItem('fbName', this.provider.name);
-  //     window.localStorage.setItem('fbProfilePicture', this.provider.profilePicture);
-  //     window.localStorage.setItem('fbEmail', this.provider.email);
-  //     this.navCtrl.push(MainPage);
-  //   });
-  // }
-
   loginWithFacebook() {
     this.fire.auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())
       .then(() => {
@@ -67,29 +51,15 @@ export class WelcomePage {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
+          console.log(errorCode, errorMessage);
         });
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
       });
   }
-
-  // loginWithGoogle() {
-  //   this.fire.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-  //     .then(res => {
-  //       console.log(res);
-  //       this.provider.loggedIn = true;
-  //       this.provider.name = res.user.displayName;
-  //       this.provider.profilePicture = res.user.photoURL;
-  //       this.provider.email = res.user.email;
-  //       window.localStorage.setItem('goLoggedIn', this.provider.loggedIn.toString());
-  //       window.localStorage.setItem('goName', this.provider.name);
-  //       window.localStorage.setItem('goProfilePicture', this.provider.profilePicture);
-  //       window.localStorage.setItem('goEmail', this.provider.email);
-  //       this.navCtrl.push(MainPage);
-  //     });
-  // }
 
   loginWithGoogle() {
     this.fire.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
@@ -109,11 +79,13 @@ export class WelcomePage {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
+          console.log(errorCode, errorMessage);
         });
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
       });
   }
 
