@@ -8,12 +8,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Toast } from '@ionic-native/toast';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyAcJfDabRikCXRgvQfCwEJKiweUEuHjj4Q",
+  apiKey: "AIzaSyC92P8rpGSZ068CXddHK9H71P5DpcFUfGM",
   authDomain: "jalale-d6c8e.firebaseapp.com",
   databaseURL: "https://jalale-d6c8e.firebaseio.com",
   projectId: "jalale-d6c8e",
@@ -52,6 +55,9 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    Toast,
+    GoogleMaps,
     // { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

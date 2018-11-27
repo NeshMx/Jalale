@@ -18,8 +18,8 @@ import { Tab1Root, Tab2Root } from '../';
 })
 export class TabsPage {
 
-  tab1Root: any = Tab1Root;
-  tab2Root: any = Tab2Root;
+  tab1Root: any;
+  tab2Root: any;
 
   tab1Title = " ";
   tab2Title = " ";
@@ -27,6 +27,9 @@ export class TabsPage {
   constructor(public navCtrl: NavController, 
     public translateService: TranslateService,
     public navParams: NavParams) {
+
+    this.tab1Root = Tab1Root;
+    this.tab2Root = Tab2Root;
 
     translateService.get(['TAB1_TITLE', 'TAB2_TITLE']).subscribe(values => {
       this.tab1Title = values['TAB1_TITLE'];
