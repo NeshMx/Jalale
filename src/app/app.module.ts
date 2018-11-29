@@ -14,6 +14,7 @@ import { Toast } from '@ionic-native/toast';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
+import { AddRestroomPage} from '../pages/add-restroom/add-restroom'
 import { RestroomsProvider } from '../providers/restrooms/restrooms';
 
 // Initialize Firebase
@@ -34,7 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    AddRestroomPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    AddRestroomPage
   ],
   providers: [
     StatusBar,

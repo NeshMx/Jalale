@@ -14,9 +14,11 @@ export class RestroomsProvider {
     return this.db.list('restrooms/').valueChanges();
   }
 
-  public addRestroom(rest: Restroom) {
+  public addRestroom(rest: any) {
     console.log(rest);
-    // return this.db.list('restrooms/').push(rest);
+    return this.db.list('restrooms/').push(rest).then(result => {
+      return result;
+    });
   }
 
   // updateRestroom(rest: Restroom) {

@@ -27,7 +27,7 @@ export class AddRestroomPage {
   isReadyToSave: boolean;
 
   rest: any;
-  
+
   form: FormGroup;
 
   map: GoogleMap;
@@ -106,8 +106,10 @@ export class AddRestroomPage {
       },
       draggable: true
     });
-    marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-      alert('clicked');
+    marker.on(GoogleMapsEvent.MARKER_DRAG).subscribe((mrk) => {
+      alert(mrk);
+      this.usrLat = mrk.lat
+      this.usrLong = mrk.long
     });
   }
 
@@ -119,8 +121,22 @@ export class AddRestroomPage {
     if (!this.form.valid) {
       return;
     }
-    console.log(this.form.value);
-    this.viewCtrl.dismiss(this.form.value);
+    let data = {
+      comment: this.form.value['comment'] ,
+      concurrence: this.form.value['concurrence'],
+      hasaccessibility: this.form.value['hasaccessibility'],
+      isfree: this.form.value['isfree'],
+      lat: this.usrLat,
+      long: this.usrLong,
+      name: this.form.value['name'],
+      price: this.form.value['price'],
+      score: this.form.value['score'],
+      type: this.form.value['type'],
+    }
+    this.restrooms.addRestroom(data).then(result => {
+      console.log('new restroom', result)
+      this.navCtrl.pop();
+    })
   }
 
 }

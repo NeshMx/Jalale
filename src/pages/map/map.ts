@@ -10,12 +10,13 @@ import {
   CameraPosition,
   MarkerOptions,
   Marker,
-  Environment
+  Environment,
+  LatLng
 } from '@ionic-native/google-maps';
 
 import { Restroom } from '../../models/restroom';
 import { RestroomsProvider } from '../../providers/restrooms/restrooms';
-
+import {AddRestroomPage} from '../add-restroom/add-restroom'
 /**
  * Generated class for the MapPage page.
  *
@@ -34,7 +35,7 @@ export class MapPage {
 
   usrLat: number;
   usrLong: number;
-
+  restroomsMarkers: any;
   map: GoogleMap;
 
   public restroomsList: any[];
@@ -86,16 +87,36 @@ export class MapPage {
         lng: this.usrLong
       }
     });
+    this.restrooms.getRestroomList().subscribe(result => {
+      result.forEach(restroom => {
+        this.addMarker(restroom)
+      })
+    })
+
+
+  }
+
+  addMarker(restroom){
+    //let distance = getDistanceToRestroom()
+      var markerOptions: MarkerOptions = {
+        position: new LatLng(restroom.lat, restroom.long),
+        title: restroom['name'], // lo mejor sería restroom['name'] + String(distance)
+        icon: 'blue'
+      };
+      //console.log('OPTIONS FOR NEW MARKER', markerOptions)
+      this.map.addMarker(markerOptions);
   }
 
   addItem() {
-    let addModal = this.modalCtrl.create('AddRestroomPage');
-    addModal.onDidDismiss(rest => {
-      if (rest) {
-        this.restrooms.addRestroom(rest);
-      }
-    })
-    addModal.present();
+
+    this.navCtrl.push(AddRestroomPage)
+    //let addModal = this.modalCtrl.create('AddRestroomPage');
+    //addModal.onDidDismiss(rest => {
+      //if (rest) {
+        //this.restrooms.addRestroom(rest);
+      //}
+    //})
+    //addModal.present();
   }
 
   openItem(rest: Restroom) {
