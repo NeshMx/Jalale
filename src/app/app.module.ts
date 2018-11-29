@@ -7,12 +7,14 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
+import { RestroomsProvider } from '../providers/restrooms/restrooms';
 
 // Initialize Firebase
 var config = {
@@ -47,6 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
     IonicModule.forRoot(MyApp),
     AngularFireAuthModule,
     AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,7 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
     Toast,
     GoogleMaps,
     // { provide: Settings, useFactory: provideSettings, deps: [Storage] },
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestroomsProvider
   ]
 })
 export class AppModule {}

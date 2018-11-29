@@ -33,5 +33,17 @@
   "ABOUT_TITLE": "Acerca de",
 
   "LOGIN_SUCCESS": "Inicio de sesión exitoso.",
-  "LOGIN_ERROR": "No se pudo iniciar sesión. Intente de nuevo."
+  "LOGIN_ERROR": "No se pudo iniciar sesión. Intente de nuevo.",
+
+  "REST_ADDRESS_PLACEHOLDER": "Dirección", 
+  "REST_NAME_PLACEHOLDER": "Nombre", 
+  "REST_COMMENT_PLACEHOLDER": "Comentario", 
+  "REST_TYPE_PLACEHOLDER": "Tipo", 
+  "REST_ISFREE_PLACEHOLDER": "Gratis", 
+  "REST_PRICE_PLACEHOLDER": "Precio", 
+  "REST_HASACCESSIBILITY_PLACEHOLDER": "Accesibilidad", 
+  "REST_CONCURRENCE_PLACEHOLDER": "Concurrencia", 
+  "REST_SCORE_PLACEHOLDER": "Calificación",
+
+  "ADD_RESTROOM_TITLE": "Añadir baño"
 }

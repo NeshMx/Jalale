@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Toast } from '@ionic-native/toast';
 import {
@@ -12,6 +12,9 @@ import {
   Marker,
   Environment
 } from '@ionic-native/google-maps';
+
+import { Restroom } from '../../models/restroom';
+import { RestroomsProvider } from '../../providers/restrooms/restrooms';
 
 /**
  * Generated class for the MapPage page.
@@ -32,18 +35,19 @@ export class MapPage {
   usrLat: number;
   usrLong: number;
 
-  markerLatLng: {
-    lat: number,
-    long: number
-  }
-
   map: GoogleMap;
+
+  public restroomsList: any[];
 
   constructor(public navCtrl: NavController,
     private geolocation: Geolocation,
     private toast: Toast,
-    private maps: GoogleMaps) {
-
+    private maps: GoogleMaps,
+    private modalCtrl: ModalController,
+    public restrooms: RestroomsProvider ) {
+    this.restrooms.getRestroomList().subscribe(result => {
+      this.restroomsList = result;
+    });
   }
 
   ionViewDidLoad(){
@@ -68,30 +72,36 @@ export class MapPage {
            lat: this.usrLat,
            lng: this.usrLong
          },
-         zoom: 18,
-         tilt: 30
+         zoom: 16
        }
     };
 
     let element = this.mapElement.nativeElement;
     this.map = this.maps.create(element, mapOptions);
 
-    let marker: Marker = this.map.addMarkerSync({
-      title: 'Ionic',
-      icon: 'blue',
-      animation: 'DROP',
+    let usrMarker: Marker = this.map.addMarkerSync({
+      title: 'Usted',
       position: {
         lat: this.usrLat,
         lng: this.usrLong
       }
     });
-    marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-      alert('clicked');
-    });
   }
 
   addItem() {
-    console.log('Add button its working');
+    let addModal = this.modalCtrl.create('AddRestroomPage');
+    addModal.onDidDismiss(rest => {
+      if (rest) {
+        this.restrooms.addRestroom(rest);
+      }
+    })
+    addModal.present();
+  }
+
+  openItem(rest: Restroom) {
+    this.navCtrl.push('RestroomDetailPage', {
+      rest: rest
+    });
   }
 
 }

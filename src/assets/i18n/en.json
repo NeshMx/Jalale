@@ -30,8 +30,20 @@
   "MAP_TITLE": "Map",
   "LIST_TITLE": "List",
   "ACCOUNT_TITLE": "Account",
-  "ABOUT_TITLE": "About"
+  "ABOUT_TITLE": "About",
   
   "LOGIN_SUCCESS": "Login was successful.",
-  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again."
+  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
+
+  "REST_ADDRESS_PLACEHOLDER": "Address", 
+  "REST_NAME_PLACEHOLDER": "Name", 
+  "REST_COMMENT_PLACEHOLDER": "Comment", 
+  "REST_TYPE_PLACEHOLDER": "Type", 
+  "REST_ISFREE_PLACEHOLDER": "Fre", 
+  "REST_PRICE_PLACEHOLDER": "Price", 
+  "REST_HASACCESSIBILITY_PLACEHOLDER": "Accessibility", 
+  "REST_CONCURRENCE_PLACEHOLDER": "Concurrence", 
+  "REST_SCORE_PLACEHOLDER": "Score",
+
+  "ADD_RESTROOM_TITLE": "Add restroom"
 }

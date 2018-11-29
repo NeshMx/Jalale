@@ -1,3 +1,22 @@
 page-about {
+  .logo {
+    background-color: black;
+  }
 
+  .logo img{
+    max-width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .version p {
+    text-align: center;
+    font-size: x-small;
+  }
 }

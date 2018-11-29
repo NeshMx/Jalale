@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
-/**
- * Generated class for the ListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Restroom } from '../../models/restroom';
+import { RestroomsProvider } from '../../providers/restrooms/restrooms';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,30 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class ListPage {
 
-  constructor(public navCtrl: NavController) {
+  public currentRestrooms: any[];
+
+  constructor(public navCtrl: NavController,
+    public modalCtrl: ModalController,
+    public restrooms: RestroomsProvider) {
+      this.restrooms.getRestroomList().subscribe(result => {
+        this.currentRestrooms = result;
+      });
   }
 
   addItem() {
-    console.log('Add button its working');
+    let addModal = this.modalCtrl.create('AddRestroomPage');
+    addModal.onDidDismiss(rest => {
+      if (rest) {
+        this.restrooms.addRestroom(rest);
+      }
+    })
+    addModal.present();
+  }
+
+  openItem(rest: Restroom) {
+    this.navCtrl.push('RestroomDetailPage',{
+      rest: rest
+    })
   }
 
 }

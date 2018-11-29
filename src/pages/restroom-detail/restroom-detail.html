@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div #map id="map" style="height:60%;"></div>
+  <div class="info">
+    <h4>Dirección:</h4>
+    <p>FALTA REVERSE GEOCODING</p>
+    <h4>Comentario:</h4>
+    <p>{{item.comment}}</p>
+    <h4>Tipo:</h4>
+    <p>{{item.type}}</p>
+    <h4>Gratis:</h4>
+    <p>{{(item.isfree === true) ? 'Sí' : 'No'}}</p>
+    <h4>Precio:</h4>
+    <p>$ {{item.price}}</p>
+    <h4>Accesibilidad:</h4>
+    <p>{{(item.hasaccessibility === true) ? 'Sí' : 'No'}}</p>
+    <h4>Concurrencia:</h4>
+    <p>{{item.concurrence}}</p>
+    <h4>Calificación:</h4>
+    <p>{{item.score}}</p>
+  </div>
+</ion-content>
