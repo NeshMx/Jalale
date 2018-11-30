@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Toast } from '@ionic-native/toast';
+import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder';
 import {
   GoogleMaps,
   GoogleMap,
@@ -35,14 +36,14 @@ export class RestroomDetailPage {
 
   constructor(private toast: Toast,
     private maps: GoogleMaps,
-    private modalCtrl: ModalController,
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public restrooms: RestroomsProvider) {
+    public restrooms: RestroomsProvider,
+    private nativeGeocoder: NativeGeocoder) {
     this.item = this.navParams.get('rest');
   }
 
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     this.loadMap();
   }
 
@@ -50,24 +51,43 @@ export class RestroomDetailPage {
 
     let mapOptions: GoogleMapOptions = {
       camera: {
-         target: {
-           lat: this.item['lat'],
-           lng: this.item['long']
-         },
-         zoom: 16
-       }
+        target: {
+          lat: this.item['lat'],
+          lng: this.item['long']
+        },
+        zoom: 16
+      }
     };
 
     let element = this.mapElement.nativeElement;
     this.map = this.maps.create(element, mapOptions);
 
+    var icon = 'assets/icon/favicon.ico'
+
     let marker: Marker = this.map.addMarkerSync({
-      title: 'Usted',
+      title: this.item['name'],
       position: {
         lat: this.item['lat'],
         lng: this.item['long']
-      }
+      },
+      icon: icon
     });
+
+    this.getAddress();
   }
 
+  getAddress() {
+    let options: NativeGeocoderOptions = {
+      useLocale: true,
+      maxResults: 5
+    };
+    this.nativeGeocoder.reverseGeocode(this.item['lat'], this.item['long'], options)
+      .then((result: NativeGeocoderReverseResult[]) => {
+        this.item['address'] = result[0].thoroughfare + " " + result[0].subThoroughfare +
+        ", " + result[0].subLocality + ", " + result[0].locality + ", " + result[0].subAdministrativeArea
+        + ", " + result[0].countryName + " CP " + result[0].postalCode;
+      })
+      .catch((error: any) => console.log(error));
+  }
 }
+

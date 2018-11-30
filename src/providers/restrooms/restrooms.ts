@@ -15,7 +15,6 @@ export class RestroomsProvider {
   }
 
   public addRestroom(rest: any) {
-    console.log(rest);
     return this.db.list('restrooms/').push(rest).then(result => {
       return result;
     });

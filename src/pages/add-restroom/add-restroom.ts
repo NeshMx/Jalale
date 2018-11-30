@@ -36,6 +36,8 @@ export class AddRestroomPage {
   usrLong: number;
 
   public restroomsList: any[];
+  public types = [];
+  public uniqueTypes = [];
 
   constructor(public navCtrl: NavController,
     public formBuilder: FormBuilder,
@@ -47,10 +49,13 @@ export class AddRestroomPage {
 
     this.restrooms.getRestroomList().subscribe(result => {
       this.restroomsList = result;
+      this.restroomsList.forEach(rest => {
+        this.types.push(rest.type);
+      });
+      this.uniqueTypes = this.types.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
     });
 
     this.form = formBuilder.group({
-      address: ['', Validators.required],
       name: ['', Validators.required],
       comment: ['', Validators.required],
       type: [null, Validators.required],
@@ -107,7 +112,6 @@ export class AddRestroomPage {
       draggable: true
     });
     marker.on(GoogleMapsEvent.MARKER_DRAG).subscribe((mrk) => {
-      alert(mrk);
       this.usrLat = mrk.lat
       this.usrLong = mrk.long
     });
@@ -134,7 +138,6 @@ export class AddRestroomPage {
       type: this.form.value['type'],
     }
     this.restrooms.addRestroom(data).then(result => {
-      console.log('new restroom', result)
       this.navCtrl.pop();
     })
   }

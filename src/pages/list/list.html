@@ -23,13 +23,15 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let rest of currentRestrooms">
+    <ion-item-sliding *ngFor="let rest of orderedRestrooms">
       <button ion-item (click)="openItem(rest)">
-        <!-- <ion-avatar item-start>
-          <img [src]="item.profilePic" />
-        </ion-avatar> -->
+        <ion-avatar item-start>
+          <img src="assets/img/appicon-whitebg.png" />
+        </ion-avatar>
         <h2>{{rest.name}}</h2>
         <p>{{rest.comment}}</p>
+        <p>Calificación: {{ rest.score }} de 5</p>
+        <p>Distancia: {{ rest.distance }} km</p>
       </button>
     </ion-item-sliding>
   </ion-list>

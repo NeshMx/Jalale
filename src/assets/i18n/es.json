@@ -21,9 +21,15 @@
   "TUTORIAL_SLIDE2_DESCRIPTION": "Inicia sesión con tu cuenta de Google o Facebook",
   
   "TUTORIAL_SLIDE3_TITLE": "Después",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Presiona el botón para encontrar tu ubicación y obtendrás el marcador más cercano a tu posición",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Acepta los permisos para encontrar tu ubicación",
 
-  "TUTORIAL_SLIDE4_TITLE": "¡Que no te gane!",
+  "TUTORIAL_SLIDE4_TITLE": "A continuación",
+  "TUTORIAL_SLIDE4_DESCRIPTION": "Espera a que la aplicación encuentre tu ubicación y te mostrará el baño más cercano a tu posición",
+
+  "TUTORIAL_SLIDE5_TITLE": "Si lo deseas",
+  "TUTORIAL_SLIDE5_DESCRIPTION": "Cambia a la página de lista, para ver una lista de baños ordenada del más cercano al más lejano a tu posición",
+
+  "TUTORIAL_SLIDE6_TITLE": "¡Que no te gane!",
 
   "WELCOME_INTRO": "!Encontremos un baño!",
 
@@ -34,8 +40,7 @@
 
   "LOGIN_SUCCESS": "Inicio de sesión exitoso.",
   "LOGIN_ERROR": "No se pudo iniciar sesión. Intente de nuevo.",
-
-  "REST_ADDRESS_PLACEHOLDER": "Dirección", 
+  
   "REST_NAME_PLACEHOLDER": "Nombre", 
   "REST_COMMENT_PLACEHOLDER": "Comentario", 
   "REST_TYPE_PLACEHOLDER": "Tipo", 

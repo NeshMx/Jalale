@@ -34,8 +34,7 @@
   
   "LOGIN_SUCCESS": "Login was successful.",
   "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
-
-  "REST_ADDRESS_PLACEHOLDER": "Address", 
+  
   "REST_NAME_PLACEHOLDER": "Name", 
   "REST_COMMENT_PLACEHOLDER": "Comment", 
   "REST_TYPE_PLACEHOLDER": "Type", 

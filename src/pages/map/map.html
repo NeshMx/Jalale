@@ -13,16 +13,17 @@
 </ion-header>
 
 <ion-content>
-  <div #map id="map" style="height:80%;"></div>
-  <div style="height: 20%">
-    <!-- <button ion-item (click)="openItem(restroomsList)">
+  <div #map id="map"></div>
+  <p padding-left>El baño más cercano es:</p>
+  <div class="info">
+    <button ion-item (click)="openItem(nearestRestroom)">
       <ion-avatar item-start>
-        <img [src]="item.profilePic" />
+        <img src="assets/img/appicon-whitebg.png" />
       </ion-avatar>
-      <h2>{{restroomsList[0].name}}</h2>
-      <p>{{restroomsList[0].comment}}</p>
-    </button> -->
-    <!-- Aquí quiero poner algo como en la ListPage, pero no puedo obtener solo un elemento de la lista.
-    Además este debería ser el más cercano a la posición del usuario -->
+      <h2>{{ nearestRestroom?.name }}</h2>
+      <p>{{ nearestRestroom?.comment }}</p>
+      <p>Calificación: {{ nearestRestroom?.score }} de 5</p>
+      <p>Distancia: {{ nearestRestroom?.distance }} km</p>
+    </button>
   </div>
 </ion-content>

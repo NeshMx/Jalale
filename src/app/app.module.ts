@@ -10,6 +10,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder } from '@ionic-native/native-geocoder';
 import { Toast } from '@ionic-native/toast';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
@@ -64,6 +65,7 @@ export function createTranslateLoader(http: HttpClient) {
     Geolocation,
     Toast,
     GoogleMaps,
+    NativeGeocoder,
     // { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestroomsProvider

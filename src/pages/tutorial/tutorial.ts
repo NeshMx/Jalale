@@ -34,6 +34,10 @@ export class TutorialPage {
       "TUTORIAL_SLIDE2_DESCRIPTION",
       "TUTORIAL_SLIDE3_TITLE",
       "TUTORIAL_SLIDE3_DESCRIPTION",
+      "TUTORIAL_SLIDE4_TITLE",
+      "TUTORIAL_SLIDE4_DESCRIPTION",
+      "TUTORIAL_SLIDE5_TITLE",
+      "TUTORIAL_SLIDE5_DESCRIPTION",
     ]).subscribe(
       (values) => {
         // console.log('Loaded values', values);
@@ -46,12 +50,22 @@ export class TutorialPage {
           {
             title: values.TUTORIAL_SLIDE2_TITLE,
             description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            image: 'assets/img/login.jpg',
           },
           {
             title: values.TUTORIAL_SLIDE3_TITLE,
             description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
+            image: 'assets/img/permission_location.jpg',
+          },
+          {
+            title: values.TUTORIAL_SLIDE4_TITLE,
+            description: values.TUTORIAL_SLIDE4_DESCRIPTION,
+            image: 'assets/img/map.png',
+          },
+          {
+            title: values.TUTORIAL_SLIDE5_TITLE,
+            description: values.TUTORIAL_SLIDE5_DESCRIPTION,
+            image: 'assets/img/list.png',
           }
         ];
       });
