@@ -94,7 +94,7 @@
     </plugin>
     <plugin name="cordova-plugin-x-toast" spec="2.7.2" />
     <plugin name="cordova-plugin-googlemaps" spec="2.4.6">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyC92P8rpGSZ068CXddHK9H71P5DpcFUfGM" />
+        <variable name="API_KEY_FOR_ANDROID" value="" />
     </plugin>
     <allow-navigation href="http://192.168.1.68:8100" />
     <plugin name="cordova-plugin-nativegeocoder" spec="3.1.3" />

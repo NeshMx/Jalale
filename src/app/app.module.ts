@@ -20,7 +20,7 @@ import { RestroomsProvider } from '../providers/restrooms/restrooms';
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyC92P8rpGSZ068CXddHK9H71P5DpcFUfGM",
+  apiKey: "",
   authDomain: "jalale-d6c8e.firebaseapp.com",
   databaseURL: "https://jalale-d6c8e.firebaseio.com",
   projectId: "jalale-d6c8e",

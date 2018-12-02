@@ -80,7 +80,7 @@
       },
       "cordova-plugin-x-toast": {},
       "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyC92P8rpGSZ068CXddHK9H71P5DpcFUfGM",
+        "API_KEY_FOR_ANDROID": "",
         "PLAY_SERVICES_VERSION": "15.0.1",
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       },
